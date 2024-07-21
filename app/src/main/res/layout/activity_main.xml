@@ -11,7 +11,7 @@
         android:id="@+id/titleApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="120dp"
         android:text="Currency Converter App"
         android:textAlignment="center"
         android:textSize="40sp"
@@ -24,7 +24,7 @@
         android:id="@+id/inputUsd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="140dp"
         android:background="@android:color/transparent"
         android:hint="Input here: $"
         android:inputType="number"
@@ -37,6 +37,7 @@
         tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
 
     <TextView
+        android:textAlignment="center"
         android:id="@+id/outputVnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

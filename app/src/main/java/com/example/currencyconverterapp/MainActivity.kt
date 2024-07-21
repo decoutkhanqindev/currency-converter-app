@@ -1,5 +1,6 @@
 package com.example.currencyconverterapp
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var outputVnd: TextView
     private lateinit var makeConvertBtn: Button
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,5 +29,13 @@ class MainActivity : AppCompatActivity() {
         inputUsd = findViewById(R.id.inputUsd)
         outputVnd = findViewById(R.id.outputVnd)
         makeConvertBtn = findViewById(R.id.makeConvertBtn)
+
+        makeConvertBtn.setOnClickListener {
+            val usdDouble = inputUsd.text.toString().toDouble()
+            val vndDouble = makeConvertUsdToVnd(usdDouble)
+            outputVnd.text = "$vndDouble VND"
+        }
     }
+
+    private fun makeConvertUsdToVnd(usd: Double): Double = usd * 25.315
 }
